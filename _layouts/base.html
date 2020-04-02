@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>{% assign title_is_not_empty = page.title | is_not_empty %}{% if title_is_not_empty %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+
+  <!-- Custom Fonts -->
+  <link href="assets/css/merriweather.sans.css" rel="stylesheet">
+  <link href='assets/css/merriweather.italic.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/v4-shims.min.css">
+  <!-- Theme CSS - Includes Bootstrap -->
+  <link href="assets/css/creative.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+{% seo %}
+</head>
+
+<body id="page-top" class="{% if page.layout == site.landing_template %}landing {% endif %}">
+  {% include nav.html    section=section site=site page=page %}
+  {{ content }}
+  {% include footer.html section=section site=site page=page %}
+  <script src="assets/js/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>

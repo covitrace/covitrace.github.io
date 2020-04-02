@@ -1,0 +1,23 @@
+# Site settings
+title: CoviTrace
+description: Privacy Respecting Proximity Tracing
+baseurl: "/" # the subpath of your site, e.g. /blog/
+url: "www.covitrace.org" # the base hostname & protocol for your site
+#author: CoviTrace de
+#lang: en_US
+
+# Build settings
+safe: true # always trues on github-pages, disables _plugins/
+markdown: kramdown
+sass:
+  indentWidth: 4
+  style: compact
+  precision: 10
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - build-in-docker.sh
+  - README.md
